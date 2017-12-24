@@ -8,11 +8,14 @@ export const setDataSetAction = <P: Object>(
   data: P[] | null = null,
   load: boolean = true,
   page: number | null = null,
-  pagesCount: number | null = null
+  pagesCount: number | null = null,
+  filter: Object = {},
+  sort: Object = {},
+  search: Object = {}
 ): SetDataSetAction<P> => {
   return {
     type: SetDataSetActionType,
-    payload: { id, data: { data, load, page, pagesCount } }
+    payload: { id, data: { data, load, page, pagesCount, filter, sort, search } }
   }
 }
 

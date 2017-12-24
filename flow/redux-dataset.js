@@ -4,7 +4,10 @@ declare module 'redux-dataset' {
     data: P[] | null,
     load: boolean,
     pagesCount: number | null,
-    page: number | null
+    page: number | null,
+    filter: Object,
+    sort: Object,
+    search: Object,
   }
   declare export type SetDataSetPayload<P: Object> = {
     id: string,

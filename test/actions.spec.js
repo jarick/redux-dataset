@@ -1,10 +1,7 @@
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 import {
-  setDataSetAction,
-  removeDataSetAction,
-  SetDataSetActionType,
-  RemoveDataSetActionType
+  setDataSetAction, removeDataSetAction, SetDataSetActionType, RemoveDataSetActionType
 } from '../'
 
 const middlewares = [thunk]
@@ -19,7 +16,10 @@ describe('actions', () => {
     const expectedActions = [
       {
         type: SetDataSetActionType,
-        payload: { id, data: { data, page: null, pagesCount: null, load: true } },
+        payload: {
+          id,
+          data: { data, page: null, pagesCount: null, load: true, filter: {}, sort: {}, search: {} }
+        },
       },
     ]
     store.dispatch(setDataSetAction(id, data))
@@ -33,7 +33,10 @@ describe('actions', () => {
     const expectedActions = [
       {
         type: SetDataSetActionType,
-        payload: { id, data: { data, page: 1, pagesCount: 2, load: true } },
+        payload: {
+          id,
+          data: { data, page: 1, pagesCount: 2, load: true, filter: {}, sort: {}, search: {} }
+        },
       },
     ]
     store.dispatch(setDataSetAction(id, data, true, 1, 2))
