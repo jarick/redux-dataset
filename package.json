@@ -1,6 +1,6 @@
 {
   "name": "redux-dataset",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Redux dataset storage",
   "main": "lib/redux-dataset.js",
   "module": "es/redux-dataset.js",
