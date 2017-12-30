@@ -6,8 +6,7 @@ declare module 'redux-dataset' {
     pagesCount: number | null,
     page: number | null,
     filter: Object,
-    sort: Object,
-    search: Object,
+    sort: Object
   }
   declare export type SetDataSetPayload<P: Object> = {
     id: string,

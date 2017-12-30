@@ -9,13 +9,12 @@ export const setDataSetAction = <P: Object>(
   load: boolean = true,
   page: number | null = null,
   pagesCount: number | null = null,
-  filter: Object = {},
   sort: Object = {},
-  search: Object = {}
+  filter: Object = {},
 ): SetDataSetAction<P> => {
   return {
     type: SetDataSetActionType,
-    payload: { id, data: { data, load, page, pagesCount, filter, sort, search } }
+    payload: { id, data: { data, load, page, pagesCount, sort, filter } }
   }
 }
 

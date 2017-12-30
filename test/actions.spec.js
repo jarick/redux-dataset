@@ -18,7 +18,7 @@ describe('actions', () => {
         type: SetDataSetActionType,
         payload: {
           id,
-          data: { data, page: null, pagesCount: null, load: true, filter: {}, sort: {}, search: {} }
+          data: { data, page: null, pagesCount: null, load: true, sort: {}, filter: {} }
         },
       },
     ]
@@ -35,7 +35,7 @@ describe('actions', () => {
         type: SetDataSetActionType,
         payload: {
           id,
-          data: { data, page: 1, pagesCount: 2, load: true, filter: {}, sort: {}, search: {} }
+          data: { data, page: 1, pagesCount: 2, load: true, sort: {}, filter: {} }
         },
       },
     ]
